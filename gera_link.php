@@ -23,8 +23,10 @@
 				$nome=readdir($dir);
 			}
 			sort($arquivo);
+			echo "<select name='arquivo'>";
 			foreach($arquivo as $arq){
-				echo '<a href='.$diretorio.'/'.$arq.'>'.$arq.'</a><br>';
+				//echo '<a href='.$diretorio.'/'.$arq.'>'.$arq.'</a><br>';
+				echo "<option value='$arq'>$arq</option>";
 			}
 			?>
 			<input type="hidden" name="MAX_FILE_SIZE" value="1000000" class="btn btn-primary"/>
